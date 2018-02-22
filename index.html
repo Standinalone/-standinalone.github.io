@@ -1,17 +1,38 @@
-﻿<html>
-<head>
+<html>
+<head>	
 	<meta charset="utf-8" />
-	<title>Alternative Math</title>
+	<title>ToDo List</title>
 	<script type = "text/javascript">
-	var a = prompt("Введите первое число", "");	      
-	var b = prompt("Введите второе число", "");
-	alert (a+" + "+b+" = "+(a+b));
+	function buttonClick()
+	{
+		var btn = document.createElement('button');
+		btn.innerHTML = 'X';
+		btn.addEventListener ('click', function(){this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode)}); // 100% можно это по другому сделать.. или нет?
+
+		var task = document.getElementById('input').value;
+		var table = document.getElementById('myTable');
+
+		td1=document.createElement('td');
+		td2=document.createElement('td');
+		tr=document.createElement('tr')
+		
+		tr.appendChild(td2);
+		tr.appendChild(td1);
+
+		td1.appendChild(btn);
+		td2.innerHTML=task;
+		table.appendChild(tr);
+	}
 	</script>
 </head>
+<style>
+table, td{
+	border: 1px solid cyan;
+}
+</style>
 <body>
-
+	<input type="button" value = "Добавить" onclick="buttonClick()" />
+	<input type="text" name="name" placeholder="add new task" id = 'input' />
+	<table id='myTable'>
 </body>
-
 </html>
-
-
