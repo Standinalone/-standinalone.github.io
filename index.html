@@ -2,27 +2,8 @@
 <head>	
 	<meta charset="utf-8" />
 	<title>ToDo List</title>
-	<script type = "text/javascript">
-	function buttonClick()
-	{
-		var btn = document.createElement('button');
-		btn.innerHTML = 'X';
-		btn.addEventListener ('click', function(){this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode)}); // 100% можно это по другому сделать.. или нет?
+	<script type = "text/javascript" src="script.js" >
 
-		var task = document.getElementById('input').value;
-		var table = document.getElementById('myTable');
-
-		td1=document.createElement('td');
-		td2=document.createElement('td');
-		tr=document.createElement('tr')
-		
-		tr.appendChild(td2);
-		tr.appendChild(td1);
-
-		td1.appendChild(btn);
-		td2.innerHTML=task;
-		table.appendChild(tr);
-	}
 	</script>
 </head>
 <style>
@@ -34,5 +15,11 @@ table, td{
 	<input type="button" value = "Добавить" onclick="buttonClick()" />
 	<input type="text" name="name" placeholder="add new task" id = 'input' />
 	<table id='myTable'>
+	<script>
+	buttonClick("Санек,");
+	buttonClick("Давай");
+	buttonClick("Новое");
+	buttonClick("Задание");
+	</script>
 </body>
 </html>
