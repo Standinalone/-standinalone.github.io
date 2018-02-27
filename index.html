@@ -4,8 +4,8 @@
 	<title>ToDo List</title>
 	<script type = "text/javascript">
 	</script>
-	<script src = "script.js">
-	</script>
+	<script src="script.js" >
+	</script>	
 </head>
 <style>
 table, td{
@@ -13,14 +13,22 @@ table, td{
 }
 </style>
 <body>
-	<input type="button" value = "Добавить" onclick="buttonClick()" />
-	<input type="text" name="name" placeholder="add new task" id = 'input' />
 	<table id='myTable'>
+		<tr>
+			<td colspan="2">
+				<input type="button" id = "addButton" value = "Добавить" />
+				<input type="text" name="name" placeholder="add new task" id = 'input' />
+			</td>
+			<td>
+				<TEXTAREA id = 'cb' cols=60 rows=2>&lta onmouseover="alert('пофиксил')"&gtнаведи на меня&lt/a&gt </TEXTAREA>
+				<input type="button" id = "copyButton" value = "Copy" />
+			</td>
+		</tr>
+	</table>
 	<script>
-	buttonClick("Санек,");
-	buttonClick("Давай");
-	buttonClick("Новое");
-	buttonClick("Задание");
+		addButton.addEventListener ('click',function(){buttonClick();});
+		copyButton.addEventListener ('click',copyClick);
 	</script>
+	
 </body>
 </html>
