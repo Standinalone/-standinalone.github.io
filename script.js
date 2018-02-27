@@ -25,7 +25,8 @@ function buttonClick(str)
 }
 
 function copyClick(){
-	var text = document.getElementById('cb').select();
+	var text = document.getElementById('cb');
+	text.select();
 	document.execCommand('Copy');
 }
 	
