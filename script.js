@@ -42,5 +42,5 @@ var entityMap = {
 };
 
 function escapeHtml (string) {
-	return string.replace(/[&<>"'`=\/]/g, function (s) {return entityMap[s];});
+	return String(string).replace(/[&<>"'`=\/]/g, function (s) {return entityMap[s];});
 }
