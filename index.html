@@ -1,0 +1,26 @@
+<html>
+<head>	
+	<meta charset="utf-8" />
+	<title>ToDo List</title>
+	<script type = "text/javascript"  script src="script.js"></script>
+</head>
+<style>
+table, th, td {
+   border: 1px solid black;
+}
+table {
+    border-collapse: collapse;
+}
+</style>
+<body id "body"> 
+	<p><b>Кол-во вершин:</b><br>
+   <input type="text" id = "nodes" value="4">
+   <p><b>Матрица D0</b><br>
+   <button type="button" id = "btn">Click Me!</button>
+   <script>
+		nodes.addEventListener("input",function(){tableCreate(this.value)});
+		tableCreate(document.getElementById("nodes").value);
+		btn.addEventListener("click", function(){btnClick()});
+   </script>
+</body>
+</html>
