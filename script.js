@@ -32,6 +32,41 @@ function min(value1, value2){
 	
 }
 function btnClick(){
+	var table = document.getElementsByTagName("table")[0];
+	// table.rows[0].cells[1].getElementsByTagName("input")[0].value = 4;
+	// table.rows[0].cells[2].getElementsByTagName("input")[0].value = 3;
+	// table.rows[0].cells[3].getElementsByTagName("input")[0].value = 3;
+	// table.rows[0].cells[4].getElementsByTagName("input")[0].value = 5;
+	
+	// table.rows[1].cells[5].getElementsByTagName("input")[0].value = 2;
+	// table.rows[1].cells[6].getElementsByTagName("input")[0].value = 2;
+	
+	// table.rows[2].cells[5].getElementsByTagName("input")[0].value = 1;
+	// table.rows[2].cells[6].getElementsByTagName("input")[0].value = 1;
+	// table.rows[2].cells[7].getElementsByTagName("input")[0].value = 2;
+	
+	// table.rows[3].cells[6].getElementsByTagName("input")[0].value = 1;
+	// table.rows[3].cells[11].getElementsByTagName("input")[0].value = 2;
+	
+	// table.rows[4].cells[7].getElementsByTagName("input")[0].value = 2;
+	// table.rows[4].cells[8].getElementsByTagName("input")[0].value = 3;
+	
+	// table.rows[5].cells[9].getElementsByTagName("input")[0].value = 1;
+	// table.rows[5].cells[10].getElementsByTagName("input")[0].value = 2;
+	
+	// table.rows[6].cells[10].getElementsByTagName("input")[0].value = 1;
+	// table.rows[6].cells[11].getElementsByTagName("input")[0].value = 3;
+	
+	// table.rows[7].cells[9].getElementsByTagName("input")[0].value = 3;
+	
+	// table.rows[8].cells[10].getElementsByTagName("input")[0].value = 3;
+	// table.rows[8].cells[11].getElementsByTagName("input")[0].value = 3;
+	
+	// table.rows[9].cells[12].getElementsByTagName("input")[0].value = 5;
+	
+	// table.rows[10].cells[12].getElementsByTagName("input")[0].value = 6;
+	
+	// table.rows[11].cells[12].getElementsByTagName("input")[0].value = 5;
 	var txt = document.getElementsByTagName("text")[0]
 	if (txt){
 			txt.parentNode.removeChild(txt);
@@ -40,8 +75,9 @@ function btnClick(){
 	var body = document.getElementsByTagName("body")[0];
 	var text1 = document.createElement("text");
 	body.appendChild(text1);
-	text1.innerHTML = "<p>d<sup>m</sup><sub>ij</sub>=min{d<sup>m-1</sup><sub>i1</sub>+d<sup>m-1</sup><sub>1j</sub>, d<sup>m-1</sup><sub>ij</sub>}</p>";
-	for (counter = 1; counter < 4; counter++){
+	text1.innerHTML = "<p>d<sup>m</sup><sub>ij</sub>=min{d<sup>m-1</sup><sub>i m-1</sub>+d<sup>m-1</sup><sub>m-1 j</sub>, d<sup>m-1</sup><sub>ij</sub>}</p>";
+	var val = document.getElementById("nodes");
+	for (counter = 1; counter <= val.value; counter++){
 		var table = document.getElementsByTagName("table")[counter-1];
 		var length = table.rows.length;	
 		var text1 = document.createElement("text");
@@ -53,9 +89,11 @@ function btnClick(){
 		body.appendChild(text);
 		for (i=0; i<length; i++){
 			for (j=0; j<length; j++){
-				//var elem = table.rows[i-1].cells[1-1].getElementsByTagName("input")[0].innerHTML;
-				var var1 = (Number(table.rows[i].cells[0].getElementsByTagName("input")[0].value) + Number(table.rows[0].cells[j].getElementsByTagName("input")[0].value));
+				var var1 = (Number(table.rows[i].cells[counter-1].getElementsByTagName("input")[0].value) + Number(table.rows[counter-1].cells[j].getElementsByTagName("input")[0].value));
 				if (isNaN(var1)){
+					var1 = Infinity;
+				}				
+				if (var1==0){
 					var1 = Infinity;
 				}
 				var var2 = Number(table.rows[i].cells[j].getElementsByTagName("input")[0].value);
@@ -63,7 +101,7 @@ function btnClick(){
 					var2 = Infinity;
 				}
 				var value = ((Math.min(var1, var2)==Infinity)?"∞":Math.min(var1, var2));
-				text.innerHTML += "d<sup>" + counter + "</sup><sub>" + (i+1) + (j+1) + "</sub> = min{" + table.rows[i].cells[0].getElementsByTagName("input")[0].value + " + " + table.rows[0].cells[j].getElementsByTagName("input")[0].value + ", " + table.rows[i].cells[j].getElementsByTagName("input")[0].value + "} = " + value + "<br>";
+			text.innerHTML += "d<sup>" + counter + "</sup><sub>" + (i+1) + (j+1) + "</sub> = " + "min{d<sup>" + (counter-1) + "</sup><sub>" + (i+1) + " " + (counter-1) + "</sub>+d<sup>" + (counter-1) + "</sup><sub>" + (counter-1) + " " + (j+1) +" </sub>, d<sup>" + (counter) + "</sup><sub>" + (i+1) + " " + (j+1) + "</sub>}"+ " = min{" + table.rows[i].cells[counter-1].getElementsByTagName("input")[0].value + " + " + table.rows[counter-1].cells[j].getElementsByTagName("input")[0].value + ", " + table.rows[i].cells[j].getElementsByTagName("input")[0].value + "} = " + value + "<br>";
 				table2.rows[i].cells[j].getElementsByTagName("input")[0].value = value;
 			}
 		}
