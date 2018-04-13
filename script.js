@@ -61,6 +61,47 @@ function tableCreate(value) {
 	// table.rows[10].cells[12].getElementsByTagName("input")[0].value = 6;
 	
 	// table.rows[11].cells[12].getElementsByTagName("input")[0].value = 5;
+	
+	
+	
+	
+	table.rows[0].cells[1].getElementsByTagName("input")[0].value = 4;
+	table.rows[0].cells[2].getElementsByTagName("input")[0].value = 2;
+	table.rows[0].cells[3].getElementsByTagName("input")[0].value = 5;
+	
+	table.rows[1].cells[4].getElementsByTagName("input")[0].value = 2;
+	table.rows[1].cells[5].getElementsByTagName("input")[0].value = 2;
+	
+	table.rows[2].cells[5].getElementsByTagName("input")[0].value = 1;
+	table.rows[2].cells[6].getElementsByTagName("input")[0].value = 2;
+	
+	table.rows[3].cells[5].getElementsByTagName("input")[0].value = 1;
+	table.rows[3].cells[6].getElementsByTagName("input")[0].value = 1;
+	table.rows[3].cells[7].getElementsByTagName("input")[0].value = 2;
+	
+	table.rows[4].cells[8].getElementsByTagName("input")[0].value = 2;
+	table.rows[4].cells[10].getElementsByTagName("input")[0].value = 2;
+	
+	table.rows[5].cells[9].getElementsByTagName("input")[0].value = 2;
+	table.rows[5].cells[10].getElementsByTagName("input")[0].value = 2;
+	
+	table.rows[6].cells[8].getElementsByTagName("input")[0].value = 1;
+	table.rows[6].cells[9].getElementsByTagName("input")[0].value = 1;
+	
+	table.rows[7].cells[9].getElementsByTagName("input")[0].value = 3;
+	table.rows[7].cells[12].getElementsByTagName("input")[0].value = 2;
+	
+	table.rows[8].cells[11].getElementsByTagName("input")[0].value = 2;
+	
+	table.rows[9].cells[10].getElementsByTagName("input")[0].value = 1;
+	table.rows[9].cells[11].getElementsByTagName("input")[0].value = 1;
+	table.rows[9].cells[12].getElementsByTagName("input")[0].value = 1;
+	
+	table.rows[10].cells[13].getElementsByTagName("input")[0].value = 5;
+	
+	table.rows[11].cells[13].getElementsByTagName("input")[0].value = 2;
+	
+	table.rows[12].cells[13].getElementsByTagName("input")[0].value = 3;
 	}
 }
 
@@ -73,7 +114,7 @@ function btnClick(){
 	var body = document.getElementsByTagName("body")[0];
 	var text1 = document.createElement("text");
 	body.appendChild(text1);
-	text1.innerHTML = "<p>d<sup>m</sup><sub>ij</sub>=min{d<sup>m-1</sup><sub>i m-1</sub>+d<sup>m-1</sup><sub>m-1 j</sub>, d<sup>m-1</sup><sub>ij</sub>}</p>";
+	text1.innerHTML = "<p>d<sup>m</sup><sub>ij</sub>=min{d<sup>m-1</sup><sub>i m</sub>+d<sup>m-1</sup><sub>m j</sub>, d<sup>m-1</sup><sub>ij</sub>}</p>";
 	var val = document.getElementById("nodes");
 	for (counter = 1; counter <= val.value; counter++){
 		console.log(counter);
@@ -128,8 +169,8 @@ function btn2Click(){
 	text1.innerHTML += "<br><b>Матрица D1</b><br>";
 	tableCreate(1); //Matrix D0
 	var table0 = document.getElementsByTagName("table")[0];
-	//for (counter = 2; counter <= val.value; counter++){
-	for (counter = 2; counter <= 13; counter++){
+	for (counter = 2; counter <= val.value; counter++){
+	//for (counter = 2; counter <= 13; counter++){
 		var m = counter-1;
 		var table1 = document.getElementsByTagName("table")[counter-1];
 		//var length = table.rows.length;	
