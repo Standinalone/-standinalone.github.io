@@ -1,3 +1,4 @@
+function min(){}
 function tableCreate(value) {
 	if (value<20){
 		
