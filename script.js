@@ -116,8 +116,8 @@ function btnClick(){
 	body.appendChild(text1);
 	text1.innerHTML = "<p>d<sup>m</sup><sub>ij</sub>=min{d<sup>m-1</sup><sub>i m</sub>+d<sup>m-1</sup><sub>m j</sub>, d<sup>m-1</sup><sub>ij</sub>}</p>";
 	var val = document.getElementById("nodes");
-	//for (counter = 1; counter <= val.value; counter++){
-	for (counter = 1; counter <= 4; counter++){
+	for (counter = 1; counter <= val.value; counter++){
+	//for (counter = 1; counter <= 4; counter++){
 		console.log(counter);
 		var table = document.getElementsByTagName("table")[counter-1];
 		var length = table.rows.length;	
