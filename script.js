@@ -108,7 +108,7 @@ function btnClick(){
 	
 }
 
-function btn2Click(){
+function btn2(){
 	var txt = document.getElementsByTagName("text")[0]
 	if (txt){
 			txt.parentNode.removeChild(txt);
