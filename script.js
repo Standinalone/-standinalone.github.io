@@ -105,7 +105,7 @@ function btnClick(){
 					var2 = Infinity;
 				}
 				var value = ((Math.min(var1, var2)==Infinity)?"∞":Math.min(var1, var2));
-			text.innerHTML += "d<sup>" + counter + "</sup><sub>" + (i+1) + (j+1) + "</sub> = " + "min{d<sup>" + (counter-1) + "</sup><sub>" + (i+1) + " " + (counter-1) + "</sub>+d<sup>" + (counter-1) + "</sup><sub>" + (counter-1) + " " + (j+1) +" </sub>, d<sup>" + (counter) + "</sup><sub>" + (i+1) + " " + (j+1) + "</sub>}"+ " = min{" + table.rows[i].cells[counter-1].getElementsByTagName("input")[0].value + " + " + table.rows[counter-1].cells[j].getElementsByTagName("input")[0].value + ", " + table.rows[i].cells[j].getElementsByTagName("input")[0].value + "} = " + value + "<br>";
+			text.innerHTML += "d<sup>" + (counter-1) + "</sup><sub>" + (i+1) + (j+1) + "</sub> = " + "min{d<sup>" + (counter-1) + "</sup><sub>" + (i+1) + " " + (counter-1) + "</sub>+d<sup>" + (counter-1) + "</sup><sub>" + (counter-1) + " " + (j+1) +" </sub>, d<sup>" + (counter) + "</sup><sub>" + (i+1) + " " + (j+1) + "</sub>}"+ " = min{" + table.rows[i].cells[counter-1].getElementsByTagName("input")[0].value + " + " + table.rows[counter-1].cells[j].getElementsByTagName("input")[0].value + ", " + table.rows[i].cells[j].getElementsByTagName("input")[0].value + "} = " + value + "<br>";
 				table2.rows[i].cells[j].getElementsByTagName("input")[0].value = value;
 			}
 		}
