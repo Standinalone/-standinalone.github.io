@@ -24,11 +24,11 @@
     top: 56;
     left: 0;
     display: flex;
-    align-items: center;
+	align-items: center;
     align-content: center; 
-    justify-content: center; 
+    <!-- justify-content: center;  -->
     overflow: auto; 
-	flex-direction: column 	
+	flex-direction: column;
 }
 #img1:hover {
 	content: url("http://i.piccy.info/i9/bf684024d64d19412edd60bed576dc67/1524055731/2281/1237002/kar2.png");
@@ -36,8 +36,6 @@
 #img2:hover {
 	content: url("http://i.piccy.info/i9/374fb3a97bcaceca9510baf87ff13068/1524057036/18278/1237002/done2.png");
 }
-
-
 </style>
 <body>
 <!-- Grey with black text -->
@@ -57,10 +55,9 @@
   </ul>
 </nav>
 
-<div class = "parent" style="heigth: 80px;">
-	<div align = "center" >
-		<div style="overflow: auto; height:80%; vertical-align: top;">
-			<table class="table table-dark table-hover " id='myTable' style="width: 400px">
+<div class = "parent" align = "center">
+		<div style="vertical-align: top;">
+			<table class="table table-dark table-hover " id='myTable' style="width: 400; heigth: 100;">
 				<thead>
 				  <tr>
 					<th>Task</th>
@@ -73,24 +70,15 @@
 			</table>
 		</div>
 		<div  class="fixed-bottom">
-			<button type="button" class="btn btn-primary" disabled id = "addButton">Добавить</button>
-			<input type="text" name="name" placeholder="add new task" id = 'input' size= "40"></input>
+			<input type="text" name="name" placeholder="new task" id = "input" style="width: 400")></input>
 		</div>
-	</div>
 </div>
 	
 	
 	
 	
 	<script>
-	
-var arr = [];
-var arr2 = [];
-var count = 0;
-		//arr.addEventListener ('click',f());
-		addButton.addEventListener ('click',function(){buttonClick();});
-		input.addEventListener ('input', function(){if(input.value) addButton.disabled = false; else addButton.disabled = true;});
-		//copyButton.addEventListener ('click',function(){copyClick();});
+		input.addEventListener ('keydown', function(){if ((event.keyCode == 13)&&(input.value)) buttonClick();});
 	</script>
 </body>
 </html>
