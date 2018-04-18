@@ -1,5 +1,6 @@
 function buttonClick(str)
 {
+	var hg;
 	var task = escapeHtml(document.getElementById('input').value);
 	//if (task){		
 		var table = document.getElementById('myTable').getElementsByTagName('tbody')[0];
