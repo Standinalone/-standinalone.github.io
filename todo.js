@@ -1,27 +1,33 @@
 function buttonClick(str)
 {
-	var btn = document.createElement('button');
-	btn.innerHTML = 'X';
-	btn.addEventListener ('click', function(){this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode)}); // 100% можно это по другому сделать.. или нет?
-	
-	if (str){
-		var task = str;
-	}
-	else{
-		var task = escapeHtml(document.getElementById('input').value);
-	}
-	var table = document.getElementById('myTable');
+	var task = escapeHtml(document.getElementById('input').value);
+	//if (task){		
+		var table = document.getElementById('myTable').getElementsByTagName('tbody')[0];
+		//var btn = document.getElementById('addButton');
+		
+		td1=document.createElement('td');
+		td2=document.createElement('td');
+		tr=document.createElement('tr')
+		
+		tr.appendChild(td2);
+		tr.appendChild(td1);
 
-	td1=document.createElement('td');
-	td2=document.createElement('td');
-	tr=document.createElement('tr')
-	
-	tr.appendChild(td2);
-	tr.appendChild(td1);
-
-	td1.appendChild(btn);
-	td2.innerHTML=task;
-	table.appendChild(tr);
+		td2.innerHTML=task;
+		table.appendChild(tr);
+		
+		var img_correct = document.createElement("img");
+		img_correct.id = "img1";
+		img_correct.style.height= "5%";
+		img_correct.src="http://i.piccy.info/i9/66a6a8e9cf122441da8bc10707689564/1524055703/2262/1237002/kar.png";
+		td1.appendChild(img_correct);
+		
+		var img_delete = document.createElement("img");
+		img_delete.id = "img2";
+		img_delete.style.height= "1%";
+		img_delete.src="http://i.piccy.info/i9/2ffefbc273e1430895dabfe183e3d316/1524056998/17353/1237002/done1.png";
+		td1.appendChild(img_delete);
+		img_delete.addEventListener ('click', function(){this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode)});
+	//}
 }
 
 function copyClick(){
