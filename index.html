@@ -21,13 +21,20 @@
     width: 100%;
     height: 100%;
     position: fixed;
-    top: 56;
+    <!-- top: 56; -->
     left: 0;
     display: flex;
 	align-items: center;
     align-content: center; 
     <!-- justify-content: center;  -->
     overflow: auto; 
+	flex-direction: column;
+}
+.flex-container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
 	flex-direction: column;
 }
 #img1:hover {
@@ -38,50 +45,44 @@
 }
 </style>
 <body>
-<div class = "row">
-<div class="col-md-12 col-xs-12">
-<!-- Grey with black text -->
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-  <ul class="navbar-nav">
- <!-- Dropdown -->
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Дискретка</a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="floid.html">Флойд</a>
-        <a class="dropdown-item" href="duncig.html">Данциг</a>
-      </div>
-    </li>
-    <li class="nav-item active">
-      <a class="nav-link active">ToDo List</a>
-    </li>
-  </ul>
-</nav>
+
+<div class = "flex-container">
+	<div>
+			<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+			  <ul class="navbar-nav">
+			 <!-- Dropdown -->
+				<li class="nav-item dropdown">
+				  <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Дискретка</a>
+				  <div class="dropdown-menu">
+					<a class="dropdown-item" href="floid.html">Флойд</a>
+					<a class="dropdown-item" href="duncig.html">Данциг</a>
+				  </div>
+				</li>
+				<li class="nav-item active">
+				  <a class="nav-link active">ToDo List</a>
+				</li>
+			  </ul>
+			</nav>
+	</div>
+	<div class = "parent" align = "center">
+			<div class = "flex-container" style="vertical-align: top" >
+				<table class="table table-dark table-hover " id='myTable' style="width: 100%">
+					<thead>
+					  <tr>
+						<th>Task</th>
+						<th>Deadline</th>
+					  </tr>
+					</thead>
+					<tbody>
+					</tbody>
+					</thead>
+				</table>
+			</div>
+			<div  class="fixed-bottom ">
+				<input type="text" name="name" placeholder="new task" id = "input" style="width: 400")></input>
+			</div>
+	</div>
 </div>
-</div>
-<div class = "row">
-<div class="col-md-12 col-xs-12">
-<div class = "parent" align = "center">
-		<div class = "flex-container col-sm-6" style="vertical-align: top" >
-			<table class="table table-dark table-hover " id='myTable' style="width: 100%">
-				<thead>
-				  <tr>
-					<th>Task</th>
-					<th>Deadline</th>
-				  </tr>
-				</thead>
-				<tbody>
-				</tbody>
-				</thead>
-			</table>
-		</div>
-		<div  class="fixed-bottom ">
-			<input type="text" name="name" placeholder="new task" id = "input" style="width: 400")></input>
-		</div>
-</div>
-</div>
-</div>
-<div class="col-sm-3">....</div>
-<div class="col-sm-9">....</div>	
 	
 	
 	
