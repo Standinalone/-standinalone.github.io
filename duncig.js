@@ -7,7 +7,7 @@ function tableCreate(value) {
 			text.parentNode.removeChild(text);
 		}
 		
-		var body = document.getElementsByTagName("body")[0];
+		var body = document.getElementById("fluid");
 		var table = document.createElement("table");
 		//table.classList.add("table-responsive");
 		

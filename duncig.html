@@ -49,11 +49,14 @@ table {
 	   <input type="text" id = "nodes" value="14">
 	   <p><b>Матрица D0</b><br>
 	   <button type="button" id = "btn2">DunceiueiGG!</button>
-	   <script>
-			nodes.addEventListener("input",function(){tableCreate(this.value)});
-			tableCreate(document.getElementById("nodes").value);
-			btn2.addEventListener("click", function(){btn2Click()});
-	   </script>
+	   <div class="table-responsive" id="fluid">
+	   </div>
+
    </div>
+   <script>
+		nodes.addEventListener("input",function(){tableCreate(this.value)});
+		tableCreate(document.getElementById("nodes").value);
+		btn2.addEventListener("click", function(){btn2Click()});
+   </script>
 </body>
 </html>
