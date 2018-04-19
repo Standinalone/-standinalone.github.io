@@ -10,18 +10,18 @@ function tableCreate(value) {
 		var body = document.getElementsByTagName("body")[0];
 		var table = document.createElement("table");
 		table.classList.add("table");
-		table.classList.add("col-sm-6");
+		table.classList.add("col-xs-6");
 		
 		body.appendChild(table);
 		for (j=0; j<value; j++){
 			var row = table.insertRow(j);
 			for (i=0; i<value; i++){
 				var cell = row.insertCell(i);
-				var text = document.createElement("input");
-				text.style.width = "17";
-				text.value = "∞";
-				text.style.border = "none";
-				cell.appendChild(text);
+				// var text = document.createElement("input");
+				// text.style.width = "17";
+				// text.value = "∞";
+				// text.style.border = "none";
+				// cell.appendChild(text);
 			}
 		}
 		for (i=0; i<value; i++){
