@@ -9,6 +9,8 @@ function tableCreate(value) {
 		
 		var body = document.getElementsByTagName("body")[0];
 		var table = document.createElement("table");
+		table.classList.add("table");
+		table.classList.add("col-sm-6");
 		
 		body.appendChild(table);
 		for (j=0; j<value; j++){
