@@ -18,7 +18,7 @@ function tableCreate(value) {
 			for (i=0; i<value; i++){
 				var cell = row.insertCell(i);
 				var text = document.createElement("input");
-				text.size = "1";
+				text.style.width = "17";
 				text.value = "∞";
 				text.style.border = "none";
 				cell.appendChild(text);
