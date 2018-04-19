@@ -14,11 +14,6 @@
 
 	</head>
 <style>
-.parent {
-	display: flex;
-    justify-content: center;
-	overflow: hidden;
-}
 #img1:hover {
 	content: url("http://i.piccy.info/i9/bf684024d64d19412edd60bed576dc67/1524055731/2281/1237002/kar2.png");
 }
@@ -28,6 +23,7 @@
 </style>
 <body>
 	<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+	
 		<ul class="navbar-nav">
 				<li>
 					<a class="nav-link dropdown-toggle" href="" id="navbardrop" data-toggle="dropdown">Дискретка</a>
@@ -48,23 +44,24 @@
 			</ul>
 		</div>
 	</nav>
-	<div class = "parent" align = "center" class="col-sm-12 col-md-4">
-		<div  align = "top" >
-			<table class="table table-dark table-hover " id="myTable" style="width: 100%">
-				<thead>
-				  <tr>
-					<th>Task</th>
-					<th>Deadline</th>
-				  </tr>
-				</thead>
-				<tbody>
-				</tbody>
-				</thead>
-			</table>
-		</div>
-		<div  class="sticky-bottom">
-			<input type="text" name="name" placeholder="new task" id = "input" style="width: 400")></input>
-		</div>
+	<div class="container col-md-5" style="display: flex; align-items: center; justify-content: center">
+
+			<div  align = "sticky-top" style="width: 100%" >
+				<table class="table table-dark table-hover " id="myTable" >
+					<thead>
+					  <tr>
+						<th>Task</th>
+						<th>Deadline</th>
+					  </tr>
+					</thead>
+					<tbody>
+					</tbody>
+					</thead>
+				</table>
+			</div>
+			<div    style=" bottom: 0; position: fixed">
+				<input type="text" name="name" placeholder="new task" id = "input" style="width: 100%")></input>
+			</div>
 	</div>
 	
 	
