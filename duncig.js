@@ -34,7 +34,7 @@ function btn2Click(){
 			txt.parentNode.removeChild(txt);
 		
 	}
-	var body = document.getElementsByTagName("body")[0];
+	var body = document.getElementById("fluid");
 	var text1 = document.createElement("text");
 	body.appendChild(text1);
 	//text1.innerHTML = "d<sub>m</sub><sup>mj</sup>=min<sup>1,2,...m-1</sup>(d<sub>0</sub>";
