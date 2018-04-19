@@ -14,24 +14,10 @@
 
 	</head>
 <style>
-.navbar{
-	display: flex;
-}
 .parent {
 	display: flex;
-	flex-wrap: wrap;
-    width: 100%;
-    position: relative;
-    <!-- top: 56; -->
-	align-items: center;
-    align-content: center; 
-    <!-- justify-content: center;  -->
-}
-.flex-container{
-    width: 100%;
-    height: 100%;
-    display: flex;
-	flex-direction: column;
+    justify-content: center;
+	overflow: hidden;
 }
 #img1:hover {
 	content: url("http://i.piccy.info/i9/bf684024d64d19412edd60bed576dc67/1524055731/2281/1237002/kar2.png");
@@ -62,23 +48,23 @@
 			</ul>
 		</div>
 	</nav>
-	<div class = "parent" align = "center">
-			<div style="vertical-align: top" >
-				<table class="table table-dark table-hover " id="myTable" style="width: 100%">
-					<thead>
-					  <tr>
-						<th>Task</th>
-						<th>Deadline</th>
-					  </tr>
-					</thead>
-					<tbody>
-					</tbody>
-					</thead>
-				</table>
-			</div>
-			<div  class="fixed-bottom ">
-				<input type="text" name="name" placeholder="new task" id = "input" style="width: 400")></input>
-			</div>
+	<div class = "parent" align = "center" class="col-sm-12 col-md-4">
+		<div  align = "top" >
+			<table class="table table-dark table-hover " id="myTable" style="width: 100%">
+				<thead>
+				  <tr>
+					<th>Task</th>
+					<th>Deadline</th>
+				  </tr>
+				</thead>
+				<tbody>
+				</tbody>
+				</thead>
+			</table>
+		</div>
+		<div  class="sticky-bottom">
+			<input type="text" name="name" placeholder="new task" id = "input" style="width: 400")></input>
+		</div>
 	</div>
 	
 	
