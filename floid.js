@@ -7,16 +7,15 @@ function tableCreate(value) {
 			text.parentNode.removeChild(text);
 		}
 		
-		var body = document.getElementsByTagName("body")[0];
+		var body = document.getElementById("fluid");
 		var table = document.createElement("table");
-		
 		body.appendChild(table);
 		for (j=0; j<value; j++){
 			var row = table.insertRow(j);
 			for (i=0; i<value; i++){
 				var cell = row.insertCell(i);
 				var text = document.createElement("input");
-				text.size = "1";
+				text.style.width = "30";
 				text.value = "∞";
 				text.style.border = "none";
 				cell.appendChild(text);
@@ -34,7 +33,7 @@ function btnClick(){
 			txt.parentNode.removeChild(txt);
 		
 	}
-	var body = document.getElementsByTagName("body")[0];
+	var body = document.getElementById("fluid");
 	var text1 = document.createElement("text");
 	body.appendChild(text1);
 	text1.innerHTML = "<p>d<sup>m</sup><sub>ij</sub>=min{d<sup>m-1</sup><sub>i m</sub>+d<sup>m-1</sup><sub>m j</sub>, d<sup>m-1</sup><sub>ij</sub>}</p>";
