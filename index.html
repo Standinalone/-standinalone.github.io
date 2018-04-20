@@ -14,6 +14,18 @@
 
 	</head>
 <style>
+
+.flex-container{
+	width:100%;
+}
+#input{
+	width:100%;
+}
+
+@media only screen and (min-width: 400px) {
+	.flex-container{width:400px;}
+	#input{width: 400px;"}
+}
 #img1:hover {
 	content: url("http://i.piccy.info/i9/bf684024d64d19412edd60bed576dc67/1524055731/2281/1237002/kar2.png");
 }
@@ -44,27 +56,24 @@
 			</ul>
 		</div>
 	</nav>
-	<div class="container " style="display: flex; align-items: center; justify-content: center">
-			<div  class="col-md-5" align = "top" >
-				<table class="table table-dark table-hover" id="myTable" >
-					<thead>
-					  <tr>
-						<th>Task</th>
-						<th>Deadline</th>
-					  </tr>
-					</thead>
-					<tbody>
-					</tbody>
-					</thead>
-				</table>
-			</div>
-			<div  class="sticky-bottom col-md-5"  style=" bottom: 0; position: fixed" align="center">
-				<input type="text" name="name" placeholder="new task" id = "input" style="width: 100%")></input>
-			</div>
+	<div class="flex-container" style=" margin: auto; display: flex; align-items: center; justify-content: center; flex-direction: column; background-color: #212529; bottom: 0">
+		<div style="overflow-y: auto; width: 100%">
+			<table class="table table-dark table-hover" id="myTable">
+				<thead>
+				  <tr>
+					<th>Task</th>
+					<th>Deadline</th>
+				  </tr>
+				</thead>
+				<tbody>
+				</tbody>
+				</thead>
+			</table> 
+		</div>
+		<div style="bottom:0; position: absolute" align="bottom">
+			<input type="text" placeholder="new task" id = "input" style="bottom: 0;"></input>
+		</div>	 
 	</div>
-	
-	
-	
 	<script>
 		input.addEventListener ('keydown', function(){if ((event.keyCode == 13)&&(input.value)) buttonClick();});
 	</script>

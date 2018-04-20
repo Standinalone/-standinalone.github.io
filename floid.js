@@ -1,4 +1,4 @@
-function tableCreate(value) {
+function tableCreate(value, d) {
 	if (value<20){	
 		var tbl = document.getElementsByTagName("table")[0];
 		var text = document.getElementsByTagName("text")[0]
