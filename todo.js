@@ -15,6 +15,9 @@ function buttonClick(str)
 
 		td2.innerHTML=task;
 		table.appendChild(tr);
+		td2.style.width="70%";
+		//td2.style.max-width =" 160px";
+		//td2.style.word-wrap = "break-word";
 		
 		var img_correct = document.createElement("img");
 		img_correct.id = "img1";
@@ -25,6 +28,8 @@ function buttonClick(str)
 		var img_delete = document.createElement("img");
 		img_delete.id = "img2";
 		img_delete.style.height= "1%";
+		img_delete.style.margin= "auto";
+		img_delete.style.display= "block";
 		img_delete.src="http://i.piccy.info/i9/2ffefbc273e1430895dabfe183e3d316/1524056998/17353/1237002/done1.png";
 		td1.appendChild(img_delete);
 		img_delete.addEventListener ('click', function(){this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode)});
