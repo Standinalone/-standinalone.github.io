@@ -135,7 +135,8 @@ function btn2Click(){
 						var2 = Infinity;
 					}				
 					var value = Math.min(var1,var2)==Infinity?"∞":Math.min(var1,var2);
-					text2.innerHTML += "d<sup>" + (m+1) + "</sup><sub>" + (i+1) + " " + (j+1) + "</sub> = min{d<sup>" + (m+1) + "</sup><sub>" + (i+1) + " " + (m+1) + "</sub> + " + "d<sup>" + (m+1) + "</sup><sub>" + (m+1) + " " + (j+1) + "</sub>; " + "d<sup>" + (m) + "</sup><sub>" + (i+1) + " " + (j+1) + "</sub>} = min{" + table2_im + " + " + table2_mj + "; " + table1_ij + "} = " + value + "<br>";
+					//text2.innerHTML += "d<sup>" + (m+1) + "</sup><sub>" + (i+1) + " " + (j+1) + "</sub> = min{d<sup>" + (m+1) + "</sup><sub>" + (i+1) + " " + (m+1) + "</sub> + " + "d<sup>" + (m+1) + "</sup><sub>" + (m+1) + " " + (j+1) + "</sub>; " + "d<sup>" + (m) + "</sup><sub>" + (i+1) + " " + (j+1) + "</sub>} = min{" + table2_im + " + " + table2_mj + "; " + table1_ij + "} = " + value + "<br>";
+					text2.innerHTML += "d<sup>" + (m+1) + "</sup><sub>" + (i+1) + " " + (j+1) + "</sub>} = min{" + table2_im + " + " + table2_mj + "; " + table1_ij + "} = " + value + "<br>";
 				}
 				table2.rows[i].cells[j].getElementsByTagName("input")[0].value = value;
 			}
