@@ -38,8 +38,8 @@ function btnClick(){
 	body.appendChild(text1);
 	text1.innerHTML = "<p>d<sup>m</sup><sub>ij</sub>=min{d<sup>m-1</sup><sub>i m</sub>+d<sup>m-1</sup><sub>m j</sub>, d<sup>m-1</sup><sub>ij</sub>}</p>";
 	var val = document.getElementById("nodes");
-	for (counter = 1; counter <= val.value; counter++){
-	//for (counter = 1; counter <= 4; counter++){
+	//for (counter = 1; counter <= val.value; counter++){
+	for (counter = 1; counter <= 4; counter++){
 		console.log(counter);
 		var table = document.getElementsByTagName("table")[counter-1];
 		var length = table.rows.length;	
@@ -64,7 +64,8 @@ function btnClick(){
 					var2 = Infinity;
 				}
 				var value = ((Math.min(var1, var2)==Infinity)?"∞":Math.min(var1, var2));
-			text.innerHTML += "d<sup>" + counter + "</sup><sub>" + (i+1) + (j+1) + "</sub> = " + "min{d<sup>" + (counter-1) + "</sup><sub>" + (i+1) + " " + (counter) + "</sub>+d<sup>" + (counter-1) + "</sup><sub>" + (counter) + " " + (j+1) +" </sub>, d<sup>" + (counter-1) + "</sup><sub>" + (i+1) + " " + (j+1) + "</sub>}"+ " = min{" + table.rows[i].cells[counter-1].getElementsByTagName("input")[0].value + " + " + table.rows[counter-1].cells[j].getElementsByTagName("input")[0].value + ", " + table.rows[i].cells[j].getElementsByTagName("input")[0].value + "} = " + value + "<br>";
+			//text.innerHTML += "d<sup>" + counter + "</sup><sub>" + (i+1) + (j+1) + "</sub> = " + "min{d<sup>" + (counter-1) + "</sup><sub>" + (i+1) + " " + (counter) + "</sub>+d<sup>" + (counter-1) + "</sup><sub>" + (counter) + " " + (j+1) +" </sub>, d<sup>" + (counter-1) + "</sup><sub>" + (i+1) + " " + (j+1) + "</sub>}"+ " = min{" + table.rows[i].cells[counter-1].getElementsByTagName("input")[0].value + " + " + table.rows[counter-1].cells[j].getElementsByTagName("input")[0].value + ", " + table.rows[i].cells[j].getElementsByTagName("input")[0].value + "} = " + value + "<br>";
+			text.innerHTML += "d<sup>" + counter + "</sup><sub>" + (i+1) + (j+1) + "</sub> = " +  "min{" + table.rows[i].cells[counter-1].getElementsByTagName("input")[0].value + " + " + table.rows[counter-1].cells[j].getElementsByTagName("input")[0].value + ", " + table.rows[i].cells[j].getElementsByTagName("input")[0].value + "} = " + value + "<br>";
 				table2.rows[i].cells[j].getElementsByTagName("input")[0].value = value;
 			}
 		}
